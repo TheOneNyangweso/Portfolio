@@ -119,7 +119,7 @@ def home():
     st.write("##")
 
     st.write(
-        f"""<div class="subtitle" style="text-align: center;">⬅️ Check out my Projects in the navigation menu! (Comming soon...)</div>""",
+        f"""<div class="subtitle" style="text-align: center;">⬅️ Check out my Projects in the navigation menu! (Coming soon...)</div>""",
         unsafe_allow_html=True,
     )
 
