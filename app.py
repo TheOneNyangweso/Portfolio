@@ -6,7 +6,7 @@ def home():
     # Page configs (tab title, favicon)
     st.set_page_config(
         page_title="Sammy Moruri's Portfolio",
-        page_icon="🍕",
+        page_icon="🧑‍💻",
     )
 
     # CSS styles file
@@ -14,7 +14,7 @@ def home():
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
     # Profile image file
-    with open("assets/profile.png", "rb") as img_file:
+    with open("assets/profile.jpg", "rb") as img_file:
         img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
 
     # PDF CV file
@@ -94,7 +94,7 @@ def home():
     st.subheader("About Me")
     st.write(
         """
-    - 🧑‍💻 I am a **ML and Software Engineer** working on a [Boehringer Ingelheim](https://www.boehringer-ingelheim.com)'s pharma project 
+    - 🧑‍💻 I am a **ML and Software Engineer** currently working on a Customer Recommendation Project at Ramana with a team of 5 people.
 
     - ❤️ I am passionate about **Machine Learning/Deep Learning, MLOps, Data, Software Engineering, Computer Vision, Optimization, Automation**, and more!
     
