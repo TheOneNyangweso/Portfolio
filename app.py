@@ -13,9 +13,15 @@ def home():
     with open("styles/main.css") as f:
         st.markdown(f"<style>{f.read()}</style>", unsafe_allow_html=True)
 
+    # Sidebar
+    # with st.sidebar:
+    #    st.write(
+    #        f"""<div class="subtitle" style="text-align: center;"><u>Projects</u></div>""",
+    #        unsafe_allow_html=True,
+    #    )
     # Profile image file
     with open("assets/profile.jpg", "rb") as img_file:
-        img = "data:image/png;base64," + base64.b64encode(img_file.read()).decode()
+        img = "data:image/jpg;base64," + base64.b64encode(img_file.read()).decode()
 
     # PDF CV file
     with open("assets/Sammy's Resume.pdf", "rb") as pdf_file:
@@ -31,21 +37,21 @@ def home():
     st.write(
         f"""
     <div class="container">
-        <div class="box">
-            <div class="spin-container">
-                <div class="shape">
-                    <div class="bd">
-                        <img src="{img}" alt="Sammy Moruri">
-                    </div>
-                </div>
-            </div>
-        </div>
+       <div class="box">
+           <div class="spin-container">
+               <div class="shape">
+                   <div class="bd">
+                       <img src="{img}" alt="Sammy Moruri">
+                   </div>
+               </div>
+           </div>
+       </div>
     </div>
     """,
         unsafe_allow_html=True,
     )
 
-    # Alternative image (static and rounded) uncomment it if you prefer this one
+    # Profile image style 2
     # st.write(f"""
     # <div style="display: flex; justify-content: center;">
     #    <img src="{img}" alt="Enric Domingo" width="300" height="300" style="border-radius: 50%; object-fit: cover; margin-top: 40px; margin-bottom: 40px;">
@@ -116,12 +122,12 @@ def home():
         mime="application/pdf",
     )
 
-    st.write("##")
+    # st.write("##")
 
-    st.write(
-        f"""<div class="subtitle" style="text-align: center;">⬅️ Check out my Projects in the navigation menu! (Coming soon...)</div>""",
-        unsafe_allow_html=True,
-    )
+    # st.write(
+    #    f"""<div class="subtitle" style="text-align: center;">⬅️ Check out my Projects in the navigation menu! (Coming soon...)</div>""",
+    #    unsafe_allow_html=True,
+    # )
 
 
 if __name__ == "__main__":
